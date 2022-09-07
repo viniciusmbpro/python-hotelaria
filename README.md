@@ -63,7 +63,7 @@ Ao criar qualquer tela o ``AppController`` passa ``por parâmetro`` a instância
 
 Nos outros Controllers ``todos os métodos estáticos`` que vão ser chamados dentro das Views para realizar a operação desejada;
 
-## 2. Views
+## 3. Views
 
 Como dito, cada View é uma classe, depois de instanciar a view base do sistema ``AppInit``:
 
@@ -126,7 +126,7 @@ Esta view filha recebe como parâmetro o frame a qual ela pertence e a instânci
 
 Desse modo elas podem realizar qualquer operação dentro do sistema;
 
-## 3. Models
+## 4. Models
 
 Todos os models herdam da classe ``Model``:
 
