@@ -5,7 +5,7 @@ from ..Models.Funcionario import *
 class AppController():
     def __init__(self, telaInicial):
         self.Init = globals()["AppInit"](self)
-        self.Init.session = {'idusuario':6, 'nome':['Steve','',''], 'foto_perfil':'7f76ff8615d64e788ea5e9633def1625.png'}
+        self.Init.session = {'idusuario':0, 'nome':['','',''], 'foto_perfil':''}
         self.tela = globals()[telaInicial](self.Init)
         self.Init.loop()
         
