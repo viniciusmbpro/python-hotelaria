@@ -7,4 +7,7 @@
 * Interface Gráfica Tkinter
 
 * Usando princípios do Singleton e SOLID
- 
+
+* Perfis de funcionários e hóspedes 
+
+Jsjs
