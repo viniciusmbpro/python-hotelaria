@@ -28,7 +28,7 @@ Desse modo qualquer operação faz este percusso:
 
 ``View`` <- ``Controller`` <- ``Model``
 
-    A primeira chamada é feita a partir do arquivo main.py
+A primeira chamada é feita a partir do arquivo main.py
 
 ## 2. Controllers
 
