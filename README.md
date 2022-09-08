@@ -93,7 +93,7 @@ class AppController():
 
 O perfil de cada usuário tem ``muitas telas``, por isso eles tem um ``arquivo de iniciação`` (que também roda em cima da AppInit), ``que instancia as subtelas``;
 
-    .App
+    .Views
     --.Admin
     ----AppInitAdmin.py
     --.Hospede
