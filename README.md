@@ -151,3 +151,5 @@ Esta classe abstrai operações que :
 Desse modo todo ``Model`` já é iniciado com essas habilidades;
 
 Os models são chamados pelos controllers e fazem a operação que lhe for pedida;
+
+[⬆ Go back to the top!](# Prototipo de um sistema de Hotelaria)<br>
