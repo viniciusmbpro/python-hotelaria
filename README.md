@@ -12,6 +12,9 @@
 
 * Perfis de funcionários e hóspedes 
 
+## Printscreens
+  <img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/login.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/cadastro.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/admin_hospede.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/admin_checkin.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/hospede_reservar.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/hospede_minhas_reservas.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/hospede_config.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/hospede_loja.png"/>
+
 ## 1. Inicialização
 
 Todo o projeto está dividido em classes:
