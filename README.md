@@ -14,8 +14,47 @@
 
 ## Printscreens
   <img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/login.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/cadastro.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/admin_hospede.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/admin_checkin.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/hospede_reservar.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/hospede_minhas_reservas.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/hospede_config.png"/><img width="50%" style="display: inline-block;" src="https://github.com/viniciusmbezerra/python_hotelaria/blob/main/printscreens/hospede_loja.png"/>
+  
+## Instalação
 
-## 1. Inicialização
+Clone o projeto com o git:
+
+    git clone https://github.com/viniciusmbezerra/python_hotelaria.git
+    
+Certifique-se que está dentro da pasta python_hotelaria
+
+Crie um ambiente virtual:
+
+* Linux:
+
+      virtualenv venv
+    
+* Windows:
+
+      python -m virtualenv venv
+      
+Ative a máquina virtual:
+
+* Linux:
+
+      . venv/bin/activate
+    
+* Windows:
+
+      cd venv/Scripts
+      activate
+      cd ../..
+    
+Instale as dependências do projeto:
+
+    pip install -r requirements.txt
+    
+Execute o arquivo main.py:
+
+    python main.py
+  
+
+## 1. Funcionamento
 
 Todo o projeto está dividido em classes:
 
