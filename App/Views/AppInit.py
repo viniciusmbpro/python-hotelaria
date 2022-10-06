@@ -13,8 +13,6 @@ from ..Controllers import *
 #definindo janela padrão
 root = tix.Tk()
 
-# esta é a branch de desenvolvimento para linux
-
 #definindo constantes
 PASTA_APP = os.path.dirname(__file__)
 MONITOR_H = root.winfo_screenheight()
