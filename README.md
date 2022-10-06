@@ -48,6 +48,11 @@ Ative a máquina virtual:
 Instale as dependências do projeto:
 
     pip install -r requirements.txt
+
+Instale a biblioteca tkinter no linux:
+
+    sudo apt-get install python-tk python3-tk
+    sudo apt-get install tix
     
 Execute o arquivo main.py:
 
