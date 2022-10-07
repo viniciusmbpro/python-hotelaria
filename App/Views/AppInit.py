@@ -18,11 +18,11 @@ PASTA_APP = os.path.dirname(__file__)
 MONITOR_H = root.winfo_screenheight()
 MONITOR_W = root.winfo_screenwidth()
 #definindo o tamanho da imagem
-img = Image.open(PASTA_APP+"\\imagens\\bg_login_3.gif")
+img = Image.open(PASTA_APP+"/imagens/bg_login_3.gif")
 img = img.resize((round(MONITOR_W), round(MONITOR_H)), Image.ANTIALIAS)
-img.save(PASTA_APP+"\\imagens\\bg_login_3.gif", format('gif'))
+img.save(PASTA_APP+"/imagens/bg_login_3.gif", format('gif'))
 #definindo imagem de fundo
-imgFundo = PhotoImage(file= PASTA_APP+"\\imagens\\bg_login_3.gif")
+imgFundo = PhotoImage(file= PASTA_APP+"/imagens/bg_login_3.gif")
 
 class AppInit():
     def __init__(self, control):
@@ -41,7 +41,7 @@ class AppInit():
         self.root.attributes('-fullscreen', True)
         self.root.resizable(False, False)
         # self.root.maxsize(width= 700, height= 500)
-        # self.root.minsize(width= 700, height= 500)
+        self.root.minsize(width= 1600, height= 900)
         # root.attributes('-alpha',0.5)
         #menu simples
         menubar = Menu(self.root)
@@ -52,7 +52,7 @@ class AppInit():
     def config_estilos(self):
         #atribuindo logo e fundo
         self.imgfundo = imgFundo
-        self.root.iconbitmap(PASTA_APP+"\\imagens\\logo2.ico") 
+        #self.root.iconbitmap(PASTA_APP+"/imagens/logo2.ico")
         self.label_imgfundo = Label(self.root, text="Clique no botão para exibir os hóspedes", image= imgFundo).place(relx= 0, rely= 0, relwidth= 1, relheight= 1)
 
         #estilização de notebooks

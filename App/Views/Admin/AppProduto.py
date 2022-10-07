@@ -110,8 +110,8 @@ class AppProduto:
         self.root2.resizable(False, False)
         self.root2.transient(self.Init.root)
         self.root2.focus_force()
-        self.root2.grab_set()
-        self.root2.iconbitmap(self.Init.pasta_app+"\\imagens\\logo2.ico")
+        # self.root2.grab_set()
+        # self.root2.iconbitmap(self.Init.pasta_app+"/imagens/logo2.ico")
 
         #definindo título
         self.label_titulo = Label(self.root2, text=f"{acao} Produto", font=tkFont.Font(family="Lucida Grande", size=15), bg="#283d8f", fg= "#ffffff")

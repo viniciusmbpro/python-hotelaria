@@ -25,8 +25,8 @@ class AppLojasAdmin():
         self.root2.resizable(False, False)
         self.root2.transient(self.Init.root)
         self.root2.focus_force()
-        self.root2.grab_set()
-        self.root2.iconbitmap(self.Init.pasta_app+"\\imagens\\logo2.ico")
+        # self.root2.grab_set()
+        # self.root2.iconbitmap(self.Init.pasta_app+"/imagens/logo2.ico")
 
         #definindo título
         self.label_titulo = Label(self.root2, text="Loja de produtos e serviços", font=tkFont.Font(family="Lucida Grande", size=20), bg="#002e4f", fg= "#ffffff")
@@ -230,7 +230,7 @@ class AppLojasAdmin():
 
     def renderCarrinho(self):
         #imagem do carrinho
-        self.img_foto_carrinho = PhotoImage(file=f"{self.Init.pasta_app}\\imagens\\cart.png")
+        self.img_foto_carrinho = PhotoImage(file=f"{self.Init.pasta_app}/imagens/cart.png")
         self.img_foto_carrinho = self.img_foto_carrinho.subsample(2,2)
         self.label_foto_carrinho = Label(self.menu_logado, image=self.img_foto_carrinho, bg="#0e3d54")
         self.label_foto_carrinho.place(relx= 0, rely= 0, relwidth= 0.3, relheight= 1)
@@ -256,7 +256,7 @@ class AppLojasAdmin():
         self.root3.transient(self.Init.root)
         self.root3.focus_force()
         self.root3.grab_set()
-        self.root3.iconbitmap(self.Init.pasta_app+"\\imagens\\logo2.ico")
+        self.root3.iconbitmap(self.Init.pasta_app+"/imagens/logo2.ico")
 
         #definindo título
         self.label_titulo = Label(self.root3, text="Carrinho de Compras", font=tkFont.Font(family="Lucida Grande", size=20), bg="#002e4f", fg= "#ffffff")

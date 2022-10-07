@@ -75,7 +75,7 @@ class AppFuncionario:
                 self.temp_frame = Frame(self.estrutura, bg="#ffffff")
                 self.temp_frame.place(relx=pos_relx[col], rely=0, relwidth=rel_width, relheight=1)
 
-                self.img_funcionario.append(PhotoImage(file=f"{self.Init.pasta_app}\\imagens\\{self.rFuncionarios[indice][9]}"))
+                self.img_funcionario.append(PhotoImage(file=f"{self.Init.pasta_app}/imagens/{self.rFuncionarios[indice][9]}"))
                 self.img_funcionario[indice] = self.img_funcionario[indice].subsample(3,3)
                 self.label_img_funcionario = Label(self.temp_frame, image=self.img_funcionario[indice], bg="#002e4f", highlightbackground="#004170", highlightthickness= 2)
                 self.label_img_funcionario.place(relx= 0.68, rely= 0.02, relwidth= 0.3, relheight= 0.3)
@@ -143,8 +143,8 @@ class AppFuncionario:
         self.root2.resizable(False, False)
         self.root2.transient(self.Init.root)
         self.root2.focus_force()
-        self.root2.grab_set()
-        self.root2.iconbitmap(self.Init.pasta_app+"\\imagens\\logo2.ico")
+        # self.root2.grab_set()
+        # self.root2.iconbitmap(self.Init.pasta_app+"/imagens/logo2.ico")
 
         #definindo título
         self.label_titulo = Label(self.root2, text=f"{acao} Funcionário", font=tkFont.Font(family="Lucida Grande", size=15), bg="#283d8f", fg= "#ffffff")
@@ -251,9 +251,9 @@ class AppFuncionario:
             self.imgPathFotoPerfil = imgPath
             img = Image.open(imgPath)
             img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.ANTIALIAS)
-            os.remove(self.Init.pasta_app+"\\imagens\\img_temp.png") 
-            img.save(self.Init.pasta_app+"\\imagens\\img_temp.png", format('png'))
-            _image = PhotoImage(file=self.Init.pasta_app+"\\imagens\\img_temp.png")
+            os.remove(self.Init.pasta_app+"/imagens/img_temp.png") 
+            img.save(self.Init.pasta_app+"/imagens/img_temp.png", format('png'))
+            _image = PhotoImage(file=self.Init.pasta_app+"/imagens/img_temp.png")
             _image = _image.subsample(2,2)
             self.campo_preView.configure(image=_image)
         self.label_foto_perfil = Label(self.f_direita, text="Foto Perfil", bg="#ffffff", fg= "#000000", font=tkFont.Font(family="Lucida Grande", size=13))
@@ -261,7 +261,7 @@ class AppFuncionario:
         self.campo_preView = Label(self.f_direita, bg="white")
         self.campo_preView.place(relx= 0.1, rely= 0.12, relwidth= 0.8, relheight= 0.1)
         self.campo_preView.bind("<Button-1>", select_file)
-        loadPreView(f"{self.Init.pasta_app}\\imagens\\{self.foto_perfil}")
+        loadPreView(f"{self.Init.pasta_app}/imagens/{self.foto_perfil}")
 
         self.label_endereco = Label(self.f_direita, text="Endereço", bg="#ffffff", fg= "#000000", font=tkFont.Font(family="Lucida Grande", size=13))
         self.label_endereco.place(relx= 0.1, rely= 0.24, relwidth= 0.2, relheight= 0.1)

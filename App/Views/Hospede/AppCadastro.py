@@ -91,9 +91,9 @@ class AppCadastro():
             self.imgPathFotoPerfil = imgPath
             img = Image.open(imgPath)
             img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.ANTIALIAS)
-            os.remove(self.Init.pasta_app+"\\imagens\\img_temp.png") 
-            img.save(self.Init.pasta_app+"\\imagens\\img_temp.png", format('png'))
-            _image = PhotoImage(file=self.Init.pasta_app+"\\imagens\\img_temp.png")
+            os.remove(self.Init.pasta_app+"/imagens/img_temp.png") 
+            img.save(self.Init.pasta_app+"/imagens/img_temp.png", format('png'))
+            _image = PhotoImage(file=self.Init.pasta_app+"/imagens/img_temp.png")
             _image = _image.subsample(2,2)
             self.campo_preView.configure(image=_image)
         self.label_foto_perfil = Label(self.f_direita, text="Foto Perfil", bg="#ffffff", fg= "#000000", font=tkFont.Font(family="Lucida Grande", size=13))
@@ -101,7 +101,7 @@ class AppCadastro():
         self.campo_preView = Label(self.f_direita, bg="white")
         self.campo_preView.place(relx= 0.1, rely= 0.12, relwidth= 0.8, relheight= 0.6)
         self.campo_preView.bind("<Button-1>", select_file)
-        loadPreView(self.Init.pasta_app+"\\imagens\\clique_aqui.png")
+        loadPreView(self.Init.pasta_app+"/imagens/clique_aqui.png")
 
         self.label_endereco = Label(self.f_direita, text="Endereço", bg="#ffffff", fg= "#000000", font=tkFont.Font(family="Lucida Grande", size=13))
         self.label_endereco.place(relx= 0.1, rely= 0.74, relwidth= 0.2, relheight= 0.1)

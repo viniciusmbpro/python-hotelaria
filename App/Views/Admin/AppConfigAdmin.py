@@ -37,7 +37,7 @@ class AppConfigAdmin():
         self.btn_home.place(relx= 0.4, rely= 0, relwidth= 0.4, relheight= 1)
 
         #imagem do perfil
-        self.img_foto_perfil = PhotoImage(file=f"{self.Init.pasta_app}\\imagens\\{Init.session['foto_perfil']}")
+        self.img_foto_perfil = PhotoImage(file=f"{self.Init.pasta_app}/imagens/{Init.session['foto_perfil']}")
         self.img_foto_perfil = self.img_foto_perfil.subsample(6,6)
         self.label_foto_perfil = Label(self.framePrincipal, image=self.img_foto_perfil, bd=2, bg="#002e4f", highlightbackground="#004170", highlightthickness= 5)
         self.label_foto_perfil.place(relx= 0.6, rely= 0.005, relwidth= 0.06, relheight= 0.09)
@@ -190,9 +190,9 @@ class AppConfigAdmin():
             self.imgPathFotoPerfil = imgPath
             img = Image.open(imgPath)
             img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.ANTIALIAS)
-            os.remove(self.Init.pasta_app+"\\imagens\\img_temp.png") 
-            img.save(self.Init.pasta_app+"\\imagens\\img_temp.png", format('png'))
-            _image = PhotoImage(file=self.Init.pasta_app+"\\imagens\\img_temp.png")
+            os.remove(self.Init.pasta_app+"/imagens/img_temp.png") 
+            img.save(self.Init.pasta_app+"/imagens/img_temp.png", format('png'))
+            _image = PhotoImage(file=self.Init.pasta_app+"/imagens/img_temp.png")
             _image = _image.subsample(2,2)
             self.campo_preView.configure(image=_image)
         self.label_foto_perfil = Label(self.f_direita, text="Foto Perfil", bg="#ffffff", fg= "#000000", font=tkFont.Font(family="Lucida Grande", size=13))
@@ -200,7 +200,7 @@ class AppConfigAdmin():
         self.campo_preView = Label(self.f_direita, bg="white")
         self.campo_preView.place(relx= 0.1, rely= 0.12, relwidth= 0.8, relheight= 0.1)
         self.campo_preView.bind("<Button-1>", select_file)
-        loadPreView(f"{self.Init.pasta_app}\\imagens\\{self.Init.session['foto_perfil']}")
+        loadPreView(f"{self.Init.pasta_app}/imagens/{self.Init.session['foto_perfil']}")
 
         self.label_endereco = Label(self.f_direita, text="Endereço", bg="#ffffff", fg= "#000000", font=tkFont.Font(family="Lucida Grande", size=13))
         self.label_endereco.place(relx= 0.1, rely= 0.24, relwidth= 0.2, relheight= 0.1)

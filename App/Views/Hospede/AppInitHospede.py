@@ -31,7 +31,7 @@ class AppInitHospede:
         self.btn_configuracoes.place(relx= 0.4, rely= 0, relwidth= 0.4, relheight= 1)
 
         #imagem do perfil
-        self.img_foto_perfil = PhotoImage(file=f"{self.Init.pasta_app}\\imagens\\{Init.session['foto_perfil']}")
+        self.img_foto_perfil = PhotoImage(file=f"{self.Init.pasta_app}/imagens/{Init.session['foto_perfil']}")
         self.img_foto_perfil = self.img_foto_perfil.subsample(6,6)
         self.label_foto_perfil = Label(self.framePrincipal, image=self.img_foto_perfil, bd=2, bg="#002e4f", highlightbackground="#004170", highlightthickness= 5)
         self.label_foto_perfil.place(relx= 0.6, rely= 0.005, relwidth= 0.06, relheight= 0.09)
@@ -68,10 +68,10 @@ class AppInitHospede:
             C.create_oval(x1, y1, x2, y2, fill = 'black')
 
         C = Canvas(self.abaRelaxe)
-        img = Image.open(self.Init.pasta_app+"\\imagens\\bg_login_3.gif")
+        img = Image.open(self.Init.pasta_app+"/imagens/bg_login_3.gif")
         img = img.resize((round(1366), round(700)), Image.ANTIALIAS)
-        img.save(self.Init.pasta_app+"\\imagens\\bg_login_3.gif", format('gif'))
-        _image = ImageTk.PhotoImage(file=self.Init.pasta_app+"\\imagens\\bg_login_3.gif")
+        img.save(self.Init.pasta_app+"/imagens/bg_login_3.gif", format('gif'))
+        _image = ImageTk.PhotoImage(file=self.Init.pasta_app+"/imagens/bg_login_3.gif")
         C.create_image((0,0), image = _image, anchor=NW)
         C.bind( "<B1-Motion>", paint )
         C.place(relwidth=1, relheight=1)

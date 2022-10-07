@@ -26,9 +26,9 @@ class AppHome:
         self.frame_menu.place(relx= 0.1, rely= 0.02, relwidth= 0.8, relheight= 0.05)
         
         #botões dos calendários
-        self.img_btn_in = PhotoImage(file=self.Init.pasta_app+"\\imagens\\calendar_btn_azul.png")
+        self.img_btn_in = PhotoImage(file=self.Init.pasta_app+"/imagens/calendar_btn_azul.png")
         self.img_btn_in = self.img_btn_in.subsample(9,9)
-        self.img_btn_out = PhotoImage(file=self.Init.pasta_app+"\\imagens\\calendar_btn_laranja.png")
+        self.img_btn_out = PhotoImage(file=self.Init.pasta_app+"/imagens/calendar_btn_laranja.png")
         self.img_btn_out = self.img_btn_out.subsample(9,9)
 
         #função para garantir que a data de início seja menor do que a data de saída
@@ -134,10 +134,10 @@ class AppHome:
             pos_relx.append((1/quadros)*i)
 
         #pegando imagem padrão
-        img = Image.open(self.Init.pasta_app+"\\imagens\\bg_quarto_1.png")
+        img = Image.open(self.Init.pasta_app+"/imagens/bg_quarto_1.png")
         img = img.resize((round(350), round(240)), Image.ANTIALIAS)
-        img.save(self.Init.pasta_app+"\\imagens\\bg_quarto_1.png", format('png'))
-        _image = ImageTk.PhotoImage(file=self.Init.pasta_app+"\\imagens\\bg_quarto_1.png")
+        img.save(self.Init.pasta_app+"/imagens/bg_quarto_1.png", format('png'))
+        _image = ImageTk.PhotoImage(file=self.Init.pasta_app+"/imagens/bg_quarto_1.png")
 
         #definindo efeito da imagem
         def efeitoImagem(event):
@@ -231,8 +231,8 @@ class AppHome:
         self.root2.resizable(False, False)
         self.root2.transient(self.Init.root)
         self.root2.focus_force()
-        self.root2.grab_set()
-        self.root2.iconbitmap(self.Init.pasta_app+"\\imagens\\logo2.ico")
+        # self.root2.grab_set()
+        # self.root2.iconbitmap(self.Init.pasta_app+"/imagens/logo2.ico")
 
         #definindo título
         self.label_titulo = Label(self.root2, text=f"Reservar {descricao}", font=tkFont.Font(family="Lucida Grande", size=15), bg="#002e4f", fg= "#ffffff")
