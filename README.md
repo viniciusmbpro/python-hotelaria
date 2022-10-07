@@ -23,6 +23,11 @@ Clone o projeto com o git:
     
 Certifique-se que está dentro da pasta python_hotelaria
 
+Se tiver utilizando linux mude para a branch ``for-linux``:
+```
+git checkout for-linux
+```
+
 Crie um ambiente virtual:
 
 * Linux:
@@ -49,15 +54,20 @@ Instale as dependências do projeto:
 
     pip install -r requirements.txt
 
-Instale a biblioteca tkinter no linux:
-
-    sudo apt-get install python-tk python3-tk
-    sudo apt-get install tix
-    
 Execute o arquivo main.py:
 
     python main.py
-  
+
+Faça o login com o ADM padrão:
+```
+email: felipe@gmail.com
+senha: felipe
+```
+
+``Possível erro -> ``Tkinter ou tix not found no linux:
+
+    sudo apt-get install python-tk python3-tk
+    sudo apt-get install tix
 
 ## 1. Funcionamento
 

@@ -255,8 +255,8 @@ class AppLojas():
         self.root3.resizable(False, False)
         self.root3.transient(self.Init.root)
         self.root3.focus_force()
-        self.root3.grab_set()
-        self.root3.iconbitmap(self.Init.pasta_app+"/imagens/logo2.ico")
+        # self.root3.grab_set()
+        # self.root3.iconbitmap(self.Init.pasta_app+"/imagens/logo2.ico")
 
         #definindo título
         self.label_titulo = Label(self.root3, text="Carrinho de Compras", font=tkFont.Font(family="Lucida Grande", size=20), bg="#002e4f", fg= "#ffffff")
