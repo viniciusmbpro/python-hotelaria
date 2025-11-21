@@ -23,10 +23,24 @@ Clone o projeto com o git:
     
 Certifique-se que está dentro da pasta python_hotelaria
 
-Se tiver utilizando linux mude para a branch ``for-linux``:
+### Para macOS:
+
+O projeto foi adaptado para rodar no macOS! Use o script fornecido:
+
+```bash
+./run_macos.sh
+```
+
+Ou siga os passos manuais abaixo.
+
+### Para Linux:
+
+Mude para a branch ``for-linux``:
 ```
 git checkout for-linux
 ```
+
+### Configuração Manual
 
 Crie um ambiente virtual:
 

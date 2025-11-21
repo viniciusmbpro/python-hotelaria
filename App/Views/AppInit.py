@@ -1,7 +1,7 @@
 #importando dependências da aplicação
 from tkinter import *
 from tkinter import ttk
-from tkinter import tix
+# from tkinter import tix  # Comentado - pode causar problemas no macOS
 from tkinter import font as tkFont
 # import awesometkinter as atk
 import os
@@ -11,18 +11,18 @@ from PIL import Image
 from ..Controllers import *
 
 #definindo janela padrão
-root = tix.Tk()
+root = Tk()  # Alterado de tix.Tk() para Tk() para compatibilidade com macOS
 
 #definindo constantes
 PASTA_APP = os.path.dirname(__file__)
 MONITOR_H = root.winfo_screenheight()
 MONITOR_W = root.winfo_screenwidth()
 #definindo o tamanho da imagem
-img = Image.open(PASTA_APP+"\\imagens\\bg_login_3.gif")
-img = img.resize((round(MONITOR_W), round(MONITOR_H)), Image.ANTIALIAS)
-img.save(PASTA_APP+"\\imagens\\bg_login_3.gif", format('gif'))
+img = Image.open(PASTA_APP+"/imagens/bg_login_3.gif")
+img = img.resize((round(MONITOR_W), round(MONITOR_H)), Image.Resampling.LANCZOS)  # ANTIALIAS depreciado
+img.save(PASTA_APP+"/imagens/bg_login_3.gif", format='gif')
 #definindo imagem de fundo
-imgFundo = PhotoImage(file= PASTA_APP+"\\imagens\\bg_login_3.gif")
+imgFundo = PhotoImage(file= PASTA_APP+"/imagens/bg_login_3.gif")
 
 class AppInit():
     def __init__(self, control):
@@ -52,7 +52,8 @@ class AppInit():
     def config_estilos(self):
         #atribuindo logo e fundo
         self.imgfundo = imgFundo
-        self.root.iconbitmap(PASTA_APP+"\\imagens\\logo2.ico") 
+        # iconbitmap não suportado com .ico no macOS
+        # self.root.iconbitmap(PASTA_APP+"/imagens/logo2.ico") 
         self.label_imgfundo = Label(self.root, text="Clique no botão para exibir os hóspedes", image= imgFundo).place(relx= 0, rely= 0, relwidth= 1, relheight= 1)
 
         #estilização de notebooks

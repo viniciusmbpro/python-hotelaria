@@ -24,8 +24,8 @@ class HospedeController():
         # codificando o nome do hospede usando a hash md5 para usar como nome da imagem
         nomeImagem = hashlib.md5(hospede.nome.encode()).hexdigest()
         img = Image.open(App.imgPathFotoPerfil)
-        img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.ANTIALIAS)
-        img.save(f"{App.Init.pasta_app}\\imagens\\{nomeImagem}.png", format('png'))
+        img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.Resampling.LANCZOS)
+        img.save(f"{App.Init.pasta_app}/imagens/{nomeImagem}.png", format('png'))
         hospede.foto_perfil = f"{nomeImagem}.png"
 
         hospede.endereco = App.campo_endereco.get()
@@ -66,28 +66,28 @@ class HospedeController():
         hospede.sexo = App.campo_sexo.get()
         if App.__class__.__name__=="AppConfig":
             print(App.imgPathFotoPerfil)
-            print(f"{Init.pasta_app}\\imagens\\{Init.session['foto_perfil']}")
-            if App.imgPathFotoPerfil!=f"{Init.pasta_app}\\imagens\\{Init.session['foto_perfil']}":
+            print(f"{Init.pasta_app}/imagens/{Init.session['foto_perfil']}")
+            if App.imgPathFotoPerfil!=f"{Init.pasta_app}/imagens/{Init.session['foto_perfil']}":
                 #apagando imagem antiga
-                os.remove(f"{Init.pasta_app}\\imagens\\{Init.session['foto_perfil']}") 
+                os.remove(f"{Init.pasta_app}/imagens/{Init.session['foto_perfil']}") 
 
                 # codificando o nome do hospede usando a hash md5 para usar como nome da imagem
                 nomeImagem = hashlib.md5(hospede.nome.encode()).hexdigest()
                 img = Image.open(App.imgPathFotoPerfil)
-                img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.ANTIALIAS)
-                img.save(f"{App.Init.pasta_app}\\imagens\\{nomeImagem}.png", format('png'))
+                img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.Resampling.LANCZOS)
+                img.save(f"{App.Init.pasta_app}/imagens/{nomeImagem}.png", format('png'))
                 hospede.foto_perfil = f"{nomeImagem}.png"
             else:
                 hospede.foto_perfil = Init.session['foto_perfil']
         elif App.__class__.__name__=="AppHospede":
             #apagando imagem antiga
-            os.remove(f"{App.Init.pasta_app}\\imagens\\{HospedeController.getInfoHospede(App.idhospede)[8]}") 
+            os.remove(f"{App.Init.pasta_app}/imagens/{HospedeController.getInfoHospede(App.idhospede)[8]}") 
 
             # codificando o nome do hospede usando a hash md5 para usar como nome da imagem
             nomeImagem = hashlib.md5(hospede.nome.encode()).hexdigest()
             img = Image.open(App.imgPathFotoPerfil)
-            img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.ANTIALIAS)
-            img.save(f"{App.Init.pasta_app}\\imagens\\{nomeImagem}.png", format('png'))
+            img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.Resampling.LANCZOS)
+            img.save(f"{App.Init.pasta_app}/imagens/{nomeImagem}.png", format('png'))
             hospede.foto_perfil = f"{nomeImagem}.png"
 
         hospede.endereco = App.campo_endereco.get()

@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-from tkinter import tix
+# from tkinter import tix  # Comentado - não suportado no macOS moderno
 from tkinter import font as tkFont
 from PIL import Image, ImageTk
 from tkcalendar import Calendar
@@ -142,7 +142,8 @@ class AppMinhasReservas:
         self.root2.transient(self.Init.root)
         self.root2.focus_force()
         self.root2.grab_set()
-        self.root2.iconbitmap(self.Init.pasta_app+"\\imagens\\logo2.ico")
+        # iconbitmap não suportado com .ico no macOS
+        # self.root2.iconbitmap(self.Init.pasta_app+"/imagens/logo2.ico")
 
         #definindo título
         self.label_titulo = Label(self.root2, text=f"Reservar {descricao}", font=tkFont.Font(family="Lucida Grande", size=15), bg="#002e4f", fg= "#ffffff")

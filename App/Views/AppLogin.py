@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-from tkinter import tix
+# from tkinter import tix  # Comentado - não suportado no macOS moderno
 from tkinter import font as tkFont
 
 #importando Controllers da aplicação

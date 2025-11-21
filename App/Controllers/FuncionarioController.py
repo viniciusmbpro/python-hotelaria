@@ -24,8 +24,8 @@ class FuncionarioController():
         # codificando o nome do funcionario usando a hash md5 para usar como nome da imagem
         nomeImagem = hashlib.md5(funcionario.nome.encode()).hexdigest()
         img = Image.open(App.imgPathFotoPerfil)
-        img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.ANTIALIAS)
-        img.save(f"{App.Init.pasta_app}\\imagens\\{nomeImagem}.png", format('png'))
+        img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.Resampling.LANCZOS)
+        img.save(f"{App.Init.pasta_app}/imagens/{nomeImagem}.png", format('png'))
         funcionario.foto_perfil = f"{nomeImagem}.png"
 
         funcionario.endereco = App.campo_endereco.get()
@@ -70,27 +70,27 @@ class FuncionarioController():
         funcionario.sexo = App.campo_sexo.get()
 
         if App.__class__.__name__=="AppConfigAdmin":
-            if App.imgPathFotoPerfil!=f"{Init.pasta_app}\\imagens\\{Init.session['foto_perfil']}":
+            if App.imgPathFotoPerfil!=f"{Init.pasta_app}/imagens/{Init.session['foto_perfil']}":
                 #apagando imagem antiga
-                os.remove(f"{Init.pasta_app}\\imagens\\{Init.session['foto_perfil']}") 
+                os.remove(f"{Init.pasta_app}/imagens/{Init.session['foto_perfil']}") 
 
                 # codificando o nome do funcionario usando a hash md5 para usar como nome da imagem
                 nomeImagem = hashlib.md5(funcionario.nome.encode()).hexdigest()
                 img = Image.open(App.imgPathFotoPerfil)
-                img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.ANTIALIAS)
-                img.save(f"{App.Init.pasta_app}\\imagens\\{nomeImagem}.png", format('png'))
+                img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.Resampling.LANCZOS)
+                img.save(f"{App.Init.pasta_app}/imagens/{nomeImagem}.png", format('png'))
                 funcionario.foto_perfil = f"{nomeImagem}.png"
             else:
                 funcionario.foto_perfil = Init.session['foto_perfil']
         elif App.__class__.__name__=="AppFuncionario":
             #apagando imagem antiga
-            os.remove(f"{App.Init.pasta_app}\\imagens\\{FuncionarioController.getInfoFuncionario(App.idfuncionario)[8]}") 
+            os.remove(f"{App.Init.pasta_app}/imagens/{FuncionarioController.getInfoFuncionario(App.idfuncionario)[8]}") 
 
             # codificando o nome do funcionario usando a hash md5 para usar como nome da imagem
             nomeImagem = hashlib.md5(funcionario.nome.encode()).hexdigest()
             img = Image.open(App.imgPathFotoPerfil)
-            img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.ANTIALIAS)
-            img.save(f"{App.Init.pasta_app}\\imagens\\{nomeImagem}.png", format('png'))
+            img = img.resize((round(400), round((img.size[1]/img.size[0])*400)), Image.Resampling.LANCZOS)
+            img.save(f"{App.Init.pasta_app}/imagens/{nomeImagem}.png", format('png'))
             funcionario.foto_perfil = f"{nomeImagem}.png"
 
         funcionario.endereco = App.campo_endereco.get()
